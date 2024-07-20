@@ -1,1 +1,2 @@
-# snow_dbt_repo_2
+name: "project_auto_sales"
+model

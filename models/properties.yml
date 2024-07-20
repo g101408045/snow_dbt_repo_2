@@ -1,0 +1,12 @@
+sources:
+  - name: "autosales"
+    description: "autosales data"
+    database: "snowflake_practice_db"
+    schema: "snowflake_autosales_schema"
+    tables:
+      - name: "automobile_sales"
+
+models:
+  - name: orders_incremental
+    config:
+      materialized: table
