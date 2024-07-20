@@ -1,0 +1,5 @@
+name: "automobile_project"
+model-paths: ["models"]
+macro-paths: ['macros']
+snapshot-paths: ['snapshot_scd']
+test-paths: ['tests']
