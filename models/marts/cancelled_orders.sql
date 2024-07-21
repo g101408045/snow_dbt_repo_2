@@ -1,0 +1,7 @@
+SELECT
+YEAR(ORDERDATE) AS years,
+SUM(CASE WHEN STATUS IN('Cancelled', 'Disputed') THEN SALES END) AS REVENUE,
+COUNT(DISTINCT CASE WHEN STATUS IN('Cancelled', 'Disputed') THEN ORDERNUMBER END) AS ORDERS
+FROM {{ref("orders_incremental")}}
+GROUP BY 1
+ORDER BY years

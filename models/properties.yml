@@ -7,6 +7,6 @@ sources:
       - name: "automobile_sales"
 
 models:
-  - name: orders_incremental
+  - name: yearly_revenue
     config:
       materialized: table
