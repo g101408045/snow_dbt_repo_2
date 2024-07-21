@@ -10,3 +10,15 @@ models:
   - name: yearly_revenue
     config:
       materialized: table
+  - name: orders_incremental
+    config:
+      materialized: table
+  - name: deal_size_closed
+    config:
+      materialized: table
+  - name: cancelled_orders
+    config:
+      materialized: table
+  - name: country_year_pivot_revenue
+    config:
+      materialized: table
