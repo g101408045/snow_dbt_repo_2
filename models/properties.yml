@@ -13,9 +13,19 @@ models:
   - name: orders_incremental
     config:
       materialized: table
+    columns:
+      - name: 'ORDERDATE'
+        tests:
+          - not_null
+      - name: 'SALES'
+        tests:
+          - non_negative
   - name: deal_size_closed
     config:
       materialized: table
   - name: cancelled_orders
+    config:
+      materialized: table
+  - name: country_year_pivot
     config:
       materialized: table
