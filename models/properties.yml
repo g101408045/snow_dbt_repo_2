@@ -29,3 +29,9 @@ models:
   - name: country_year_pivot
     config:
       materialized: table
+  - name: dates
+    config:
+      materialized: table
+  - name: daily_avg_sales_by_month_year
+    config:
+      materialized: table

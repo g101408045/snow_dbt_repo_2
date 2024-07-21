@@ -9,5 +9,5 @@ SUM(CASE WHEN YEAR(o.ORDERDATE) = {{year}} THEN o.SALES ELSE 0 END) AS sales_{{y
 FROM {{ref("orders_incremental")}} o
 LEFT JOIN {{ref("customers_scd")}} c
 ON o.CUSTOMERNAME = c.CUSTOMERNAME
-WHERE DBT_VALID_TO IS NULL
+WHERE DBT_VALID_TO IS NULL AND o.STATUS IN('Resolved', 'Shipped')
 GROUP BY 1
