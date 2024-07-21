@@ -19,6 +19,3 @@ models:
   - name: cancelled_orders
     config:
       materialized: table
-  - name: country_year_pivot_revenue
-    config:
-      materialized: table
