@@ -1,4 +1,4 @@
-{%set distinct_years = get_distinct_years(table = source("autosales", 'automobile_sales'), date_column = "ORDERDATE") %}
+{%set distinct_years = get_distinct_years(table = ref("orders_incremental"), date_column = "ORDERDATE") %}
 
 SELECT
 c.COUNTRY,
